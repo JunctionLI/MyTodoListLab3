@@ -11,11 +11,10 @@ export default function ToDoList({tasks}) {
     return(
     <ScrollView>
         <Pressable>
-          <View style={[styles.task, styles.incompleted]}>
-            {tasks.map((task,index)=> (
-            <Text style={styles.taskText} key={index}>{task}</Text>
-            ))}
-          </View>
+        {tasks.map((task,index)=> (
+          <View style={[styles.task, styles.incompleted]} key={index}>
+            <Text style={styles.taskText} >{task}</Text>
+          </View> ))}
         </Pressable>
       </ScrollView>
 );
