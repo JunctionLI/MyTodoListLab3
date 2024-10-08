@@ -10,12 +10,13 @@ import {
 export default function ToDoList({tasks}) {
     return(
     <ScrollView>
-        <Pressable>
         {tasks.map((task,index)=> (
-          <View style={[styles.task, styles.incompleted]} key={index}>
+        <View style={[styles.task, styles.incompleted]} key={index}>
+          <Pressable>
             <Text style={styles.taskText} >{task}</Text>
-          </View> ))}
-        </Pressable>
+          </Pressable>
+        </View>
+      ))}
       </ScrollView>
 );
 }
